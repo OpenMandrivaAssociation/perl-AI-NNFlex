@@ -1,7 +1,7 @@
 
 %define realname   AI-NNFlex
 %define version    0.24
-%define release    %mkrel 2
+%define release    %mkrel 3
 
 Name:       perl-%{realname}
 Version:    %{version}
