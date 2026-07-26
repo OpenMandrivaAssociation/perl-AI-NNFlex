@@ -1,15 +1,13 @@
 %define upstream_name    AI-NNFlex
-%define upstream_version 0.24
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.24
+Release:	6
 
 Summary:	Flexible API for neural networks
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/AI/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/AI/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ modules. To implement a neural network, start with the documentation for
 AI::NNFlex::Backprop, included in this distribution
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -47,8 +45,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.240.0-1mdv2011.0
 + Revision: 401791
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %0.24 fixed license field
 
 * Fri May 15 2009 Jérôme Quelin <jquelin@mandriva.org> 0.24-3mdv2010.0
 + Revision: 375967
